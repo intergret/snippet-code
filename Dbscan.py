@@ -68,6 +68,7 @@ pl.plot([eachpoint[0] for eachpoint in group1], [eachpoint[1] for eachpoint in g
 pl.plot([eachpoint[0] for eachpoint in group2], [eachpoint[1] for eachpoint in group2], 'oy')
 pl.plot([eachpoint[0] for eachpoint in group3], [eachpoint[1] for eachpoint in group3], 'og')
 
+
 # ¥Ú”°‘Î“Ùµ„£¨∫⁄…´
 pl.plot([eachpoint[0] for eachpoint in noisePoint], [eachpoint[1] for eachpoint in noisePoint], 'ok')	
 
