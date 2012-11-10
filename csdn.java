@@ -124,19 +124,19 @@ public class csdn{
 		{
 			Job sortJob = new Job(conf, "csdnsort");
 			sortJob.setJarByClass(csdn.class);
-			
-			FileInputFormat.addInputPath(sortJob, tempDir);
-			
-			sortJob.setMapperClass(SortMapper.class);
-	        FileOutputFormat.setOutputPath(sortJob, new Path(otherArgs[1]));
-	        
-	    	sortJob.setOutputKeyClass(IntWritable.class);
-			sortJob.setOutputValueClass(Text.class);
-			
-	        sortJob.setSortComparatorClass(IntDecreasingComparator.class);
 
-	        FileSystem.get(conf).deleteOnExit(tempDir);
-	        
+			FileInputFormat.addInputPath(sortJob, tempDir);
+
+			sortJob.setMapperClass(SortMapper.class);
+			FileOutputFormat.setOutputPath(sortJob, new Path(otherArgs[1]));
+
+			sortJob.setOutputKeyClass(IntWritable.class);
+			sortJob.setOutputValueClass(Text.class);
+
+			sortJob.setSortComparatorClass(IntDecreasingComparator.class);
+
+			FileSystem.get(conf).deleteOnExit(tempDir);
+
 			System.exit(sortJob.waitForCompletion(true) ? 0 : 1);
 		}
 	    
