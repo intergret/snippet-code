@@ -13,7 +13,6 @@ def findstrToFindInFile(dirName,strToFind):
 			print dirName+':'+eachline,
 
 if __name__ == '__main__':
-	dirName = 'D:\\Git\\GitWorkSpace'
-	strToFind = 'hello'
+	dirName = 'C:\\Users\\Administrator\\Desktop\\ios'
+	strToFind = 'wangxing'
 	findstrToFind(dirName,strToFind)
-	
